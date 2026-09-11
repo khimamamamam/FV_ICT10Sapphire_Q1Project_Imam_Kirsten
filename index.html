@@ -172,6 +172,77 @@ kbd {
     backdrop-filter: blur(6px);
     transition: all 0.3s ease;
 }
+
+.btn-primary {
+    background: linear-gradient(135deg, #ffbfd0, #ffd1ea);
+    border: none;
+    font-weight: bold;
+    color: #5a2e3f;
+    box-shadow: 0 0 10px rgba(255, 170, 220, 0.6);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    font-weight: bold;
+    color: #5a2e3f;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 106, 0.4),
+                0 0 30px rgba(255, 120, 174, 0.2);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #f3a9c5;
+    background: white;
+    color: #5a2e3f;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+.form-control {
+    border-radius: 30px;
+    background: rgba(255, 180, 211, 0.658);
+    border: 1px solid rgba(255, 120, 181, 0.3);
+    color: #744259;
+    padding: 10px 15px;
+}
+
+.form-control:focus {
+    background: rgba(255, 180, 211, 0.658) !important;
+    color: #744259 !important;
+    border: 1px solid rgba(255, 120, 212, 0.5);
+    box-shadow: 0 0 8px rgba(255, 0, 183, 0.5);
+}
+
+.form-control::placeholder {
+    color: #744259;
+}
+
+.form-control:hover {
+    box-shadow: 0 0 10px rgba(255, 120, 181, 0.5);
+    transition: 0.3s;
+}
+
+label::before {
+    content: "♡ ";
+    color: #80566a;
+    font-size: 0.8rem;
+}
+
+label {
+    display: inline-block;
+    font-weight: 600;
+    color: #744259;
+    background: linear-gradient(135deg, #ffc1da9a, #ffe0f0d1);
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    box-shadow: 0 1px 5px rgba(255, 140, 200, 0.25);
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
 </style>
 
 </head>
@@ -191,7 +262,7 @@ kbd {
         </div>
     
         <div class="nav-center">
-            MetroFare PH
+            COFFEEEEEEEEEEEEEEE
         </div>
     
         <div class="nav-right">
@@ -208,7 +279,17 @@ kbd {
             <kbd>Total: <span id="taskCount">0</span></kbd>
         </p>
         <br>
-        
+        <label>Coffee</label>
+        <select class="form-control" id="coffee">
+            <option value="" disabled selected>Select a coffee</option>
+            <option value="99">Americano - $99</option>
+            <option value="129">Cappuccino - $129</option>
+            <option value="139">Spanish Latte - $139</option>
+            <option value="149">Cold Brew Malt - $149</option>
+            <option value="159">Caramel Macchiato - $159</option>
+        </select>
+        <br><br>
+        <button type="submit" py-click="create order">Create Order</button>
     </div>
 
     <script>
