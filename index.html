@@ -144,14 +144,14 @@
     
         .navbar-brand {
             font-weight: bold;
-            color: #c77eff !important;
+            color: #442f55 !important;
             font-size: 1rem;
             padding: 6px 12px;
             margin-bottom: 0;
         }
     
         .nav-link {
-            color: #2f3e55 !important;
+            color: #442f55 !important;
             font-weight: 600;
             transition: all 0.3s ease;
             padding: 6px 10px;
@@ -159,9 +159,9 @@
         }
     
         .nav-link:hover {
-            color: #ad7eff !important;
+            color: #c37eff !important;
             background: rgba(255, 255, 255, 0.6);
-            box-shadow: 0 0 8px rgba(255, 141, 177, 0.5);
+            box-shadow: 0 0 8px rgba(202, 141, 255, 0.5);
             transform: translateY(-2px);
         }
     
@@ -170,10 +170,10 @@
             height: 42px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid rgba(255, 182, 213, 0.8);
+            border: 2px solid rgba(216, 182, 255, 0.8);
             box-shadow:
-                0 0 8px rgba(255, 150, 200, 0.4),
-                0 0 18px rgba(255, 120, 180, 0.2);
+                0 0 8px rgba(229, 150, 255, 0.4),
+                0 0 18px rgba(208, 120, 255, 0.2);
             transition: all 0.3s ease;
             cursor: pointer;
         }
@@ -181,8 +181,18 @@
         .nav-pfp:hover {
             transform: scale(1.1);
             box-shadow:
-                0 0 12px rgba(255, 150, 200, 0.6),
-                0 0 25px rgba(255, 120, 180, 0.3);
+                0 0 12px rgba(229, 150, 255, 0.6),
+                0 0 25px rgba(210, 120, 255, 0.3);
+        }
+
+        .inner-box {
+        background: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 15px;
+        }
+
+        .inner-box label {
+        text-align: left;
         }
 
     </style>
@@ -223,35 +233,36 @@
     <br>
 
     <div class="box">
-
-    <div class="menu">
-    <h3>Flavours:</h3>
-    
-    <input type="checkbox" id="item1" value="120">
-    <label id="item1-label">Strawberry - ₱120</label><br>
-    
-    <input type="checkbox" id="item2" value="150">
-    <label id="item2-label">Rocky Road - ₱150</label><br>
-    
-    <input type="checkbox" id="item3" value="180">
-    <label id="item3-label">Cookies & Cream - ₱180</label><br>
-    
-    <input type="checkbox" id="item4" value="168">
-    <label id="item4-label">Caramel - ₱168</label><br>
-    
-    <input type="checkbox" id="item5" value="130">
-    <label id="item5-label">Chocolate - ₱130</label><br><br>
-    
-    <button class="create" py-click="create_order">Create Order</button>
-    </div>
-    
-    <div class="receipt">
-    <h3>===== Receipt =====</h3>
-    <br><br>
-    <div id="show"></div>
-    
-    </div>
-    </div>
+        <div class="menu">
+            <div class="inner-box">
+                <h3>Flavours:</h3>
+                <input type="checkbox" id="item1" value="120">
+                <label id="item1-label">Strawberry - ₱120</label><br>
+        
+                <input type="checkbox" id="item2" value="150">
+                <label id="item2-label">Rocky Road - ₱150</label><br>
+        
+                <input type="checkbox" id="item3" value="180">
+                <label id="item3-label">Cookies & Cream - ₱180</label><br>
+        
+                <input type="checkbox" id="item4" value="168">
+                <label id="item4-label">Caramel - ₱168</label><br>
+        
+                <input type="checkbox" id="item5" value="130">
+                <label id="item5-label">Chocolate - ₱130</label><br><br>
+        
+                <button class="create" py-click="create_order">Create Order</button>
+            </div>
+        </div>
+        
+        
+        <div class="receipt">
+            <div class="inner-box">
+                <h3>=== Receipt ===</h3>
+                <br><br>
+                <div id="show"></div>
+            </div>
+        </div>
 
 
     <script type="py" src="main.py"></script>
