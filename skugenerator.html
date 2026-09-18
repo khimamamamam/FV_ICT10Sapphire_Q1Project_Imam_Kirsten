@@ -195,7 +195,8 @@
 
         .flavour {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: stretch;
             background: rgba(255, 255, 255, 0.7);
             padding: 10px;
             margin-bottom: 10px;
@@ -203,7 +204,23 @@
         }
 
         .flavour label {
-            margin-left: 8px;
+            margin-left: 0;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .flavour select,
+        .flavour input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d9bfff;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            font-family: Quicksand;
+            font-weight: 600;
+            color: #5a2e3f;
+            box-sizing: border-box;
         }
 
         .flavour span {
@@ -250,44 +267,36 @@
 
         <div class="menu">
             <div class="inner-box">
-    
-            <h3>𝄃𝄂𝄀𝄁𝄃𝄂𝄂𝄃 SKU Generator 𝄃𝄂𝄀𝄁𝄃𝄂𝄂𝄃</h3>
-            <br>
-            <div class="flavour">
-                <input type="checkbox" id="item1" value="120">
-                <label id="item1-label">Strawberry</label>
-                <span>₱120</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item2" value="150">
-                <label id="item2-label">Rocky Road</label>
-                <span>₱150</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item3" value="180">
-                <label id="item3-label">Cookies & Cream</label>
-                <span>₱180</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item4" value="168">
-                <label id="item4-label">Caramel</label>
-                <span>₱168</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item5" value="130">
-                <label id="item5-label">Chocolate</label>
-                <span>₱130</span>
-            </div>
-    
-            <br>
 
-            <button class="create" py-click="create_order">Create Order</button>
-    
-            </div>
+                <h3>𝄃𝄂𝄀𝄁𝄃𝄂𝄂𝄃 SKU Generator 𝄃𝄂𝄀𝄁𝄃𝄂𝄂𝄃</h3>
+                <br>
+                <div class="flavour">
+                    <label for="categories">Categories</label>
+                    <select id="categories">
+                        <option selected disabled>Select a category</option>
+                        <option>Cup</option>
+                        <option>Cone</option>
+                        <option>Pint</option>
+                        <option>Tub</option>
+                    </select>
+                </div>
+
+                <br>
+                <div class="flavour">
+                    <label for="prod_name">Product Name</label>
+                    <input type="text" id="prod_name" placeholder="e.g. Strawberry">
+                </div>
+
+                <br>
+                <div class="flavour">
+                    <label for="stock">Stock Quantity</label>
+                    <input type="number" id="stock" placeholder="e.g. 30" min="0">
+            
+                <br>
+                </div>
+            
+                <button class="create" py-click="create_order">Generate SKU</button>
+            
         </div>
 
     </div>
