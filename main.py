@@ -2,6 +2,7 @@ from pyscript import display, document
 
 
 def create_order(e):
+    document.getElementById("show").innerHTML = ""
     subtotal = 0
 
     if document.getElementById("item1").checked:
