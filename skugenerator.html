@@ -25,17 +25,19 @@
             background: linear-gradient(135deg, #d9bfff, #f7d1ff);
             border: none;
             font-weight: bold;
-            color: #5a2e3f;
+            color: #432e5a;
             box-shadow: 0 0 10px rgba(232, 170, 255, 0.6);
             transition: all 0.2s ease;
+            width: 100%;
         }
     
         .create:hover {
-            color: #5a2e3f;
+            background: linear-gradient(135deg, #d9bfff63, #f7d1ff6e);
+            color: #7246b9;
             transform: scale(1.05);
             box-shadow:
-                0 0 15px rgba(166, 0, 255, 0.173),
-                0 0 30px rgba(219, 120, 255, 0.2);
+                0 0 15px rgba(166, 0, 255, 0.363),
+                0 0 30px rgba(219, 120, 255, 0.452);
         }
     
         .header {
@@ -58,9 +60,8 @@
             background-color: #edd1ff;
         }
     
-        .menu,
-        .receipt {
-            width: 400px;
+        .menu {
+            width: 600px;
             margin: 20px 0;
             padding: 30px;
             max-width: 500px;
@@ -98,6 +99,7 @@
         .box {
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             gap: 50px;
         }
     
@@ -137,21 +139,21 @@
         }
     
         .navbar {
-            background: rgba(255, 226, 241, 0.427);
+            background: rgba(248, 226, 255, 0.427);
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
     
         .navbar-brand {
             font-weight: bold;
-            color: #ff7eb6 !important;
+            color: #442f55 !important;
             font-size: 1rem;
             padding: 6px 12px;
             margin-bottom: 0;
         }
     
         .nav-link {
-            color: #2f3e55 !important;
+            color: #442f55 !important;
             font-weight: 600;
             transition: all 0.3s ease;
             padding: 6px 10px;
@@ -159,9 +161,9 @@
         }
     
         .nav-link:hover {
-            color: #ff7eb6 !important;
+            color: #c37eff !important;
             background: rgba(255, 255, 255, 0.6);
-            box-shadow: 0 0 8px rgba(255, 141, 177, 0.5);
+            box-shadow: 0 0 8px rgba(202, 141, 255, 0.5);
             transform: translateY(-2px);
         }
     
@@ -170,10 +172,10 @@
             height: 42px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid rgba(255, 182, 213, 0.8);
+            border: 2px solid rgba(216, 182, 255, 0.8);
             box-shadow:
-                0 0 8px rgba(255, 150, 200, 0.4),
-                0 0 18px rgba(255, 120, 180, 0.2);
+                0 0 8px rgba(229, 150, 255, 0.4),
+                0 0 18px rgba(208, 120, 255, 0.2);
             transition: all 0.3s ease;
             cursor: pointer;
         }
@@ -181,13 +183,35 @@
         .nav-pfp:hover {
             transform: scale(1.1);
             box-shadow:
-                0 0 12px rgba(255, 150, 200, 0.6),
-                0 0 25px rgba(255, 120, 180, 0.3);
+                0 0 12px rgba(229, 150, 255, 0.6),
+                0 0 25px rgba(210, 120, 255, 0.3);
+        }
+
+        .inner-box {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .flavour {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .flavour label {
+            margin-left: 8px;
+        }
+
+        .flavour span {
+            margin-left: auto;
+            font-weight: bold;
         }
 
     </style>
-
-<!-- css codes (especially .menu, .receipt, and loading screen) from projects during G9 along with layout enhancements from ChatGPT -->
 
 </head>
 <body>
@@ -212,7 +236,7 @@
                 <a class="nav-link" href="index.html">🍧 Receipt Generator</a>
             </li>
             <li class="nav-item ms-3">
-                <img id="navProfilePic" src="https://i.pinimg.com/736x/f7/b8/59/f7b8597c8c7dc821c0c0bf02fb96b0ef.jpg" class="nav-pfp">
+                <img id="navProfilePic" src="https://i.pinimg.com/736x/a6/17/b0/a617b066b5aaf1cbc007b96ecf35c44b.jpg" class="nav-pfp">
             </li>
         </ul>
     </div>
@@ -224,33 +248,48 @@
 
     <div class="box">
 
-    <div class="menu">
-    <h3>Flavours:</h3>
+        <div class="menu">
+            <div class="inner-box">
     
-    <input type="checkbox" id="item1" value="120">
-    <label id="item1-label">Strawberry - ₱120</label><br>
+            <h3>𝄃𝄂𝄀𝄁𝄃𝄂𝄂𝄃 SKU Generator 𝄃𝄂𝄀𝄁𝄃𝄂𝄂𝄃</h3>
+            <br>
+            <div class="flavour">
+                <input type="checkbox" id="item1" value="120">
+                <label id="item1-label">Strawberry</label>
+                <span>₱120</span>
+            </div>
     
-    <input type="checkbox" id="item2" value="150">
-    <label id="item2-label">Rocky Road - ₱150</label><br>
+            <div class="flavour">
+                <input type="checkbox" id="item2" value="150">
+                <label id="item2-label">Rocky Road</label>
+                <span>₱150</span>
+            </div>
     
-    <input type="checkbox" id="item3" value="180">
-    <label id="item3-label">Cookies & Cream - ₱180</label><br>
+            <div class="flavour">
+                <input type="checkbox" id="item3" value="180">
+                <label id="item3-label">Cookies & Cream</label>
+                <span>₱180</span>
+            </div>
     
-    <input type="checkbox" id="item4" value="168">
-    <label id="item4-label">Caramel - ₱168</label><br>
+            <div class="flavour">
+                <input type="checkbox" id="item4" value="168">
+                <label id="item4-label">Caramel</label>
+                <span>₱168</span>
+            </div>
     
-    <input type="checkbox" id="item5" value="130">
-    <label id="item5-label">Chocolate - ₱130</label><br><br>
+            <div class="flavour">
+                <input type="checkbox" id="item5" value="130">
+                <label id="item5-label">Chocolate</label>
+                <span>₱130</span>
+            </div>
     
-    <button class="create" py-click="create_order">Create Order</button>
-    </div>
+            <br>
+
+            <button class="create" py-click="create_order">Create Order</button>
     
-    <div class="receipt">
-    <h3>===== Receipt =====</h3>
-    <br><br>
-    <div id="show"></div>
-    
-    </div>
+            </div>
+        </div>
+
     </div>
 
 

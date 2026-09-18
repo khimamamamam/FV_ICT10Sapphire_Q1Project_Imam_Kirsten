@@ -25,17 +25,19 @@
             background: linear-gradient(135deg, #d9bfff, #f7d1ff);
             border: none;
             font-weight: bold;
-            color: #5a2e3f;
+            color: #432e5a;
             box-shadow: 0 0 10px rgba(232, 170, 255, 0.6);
             transition: all 0.2s ease;
+            width: 100%;
         }
     
         .create:hover {
-            color: #5a2e3f;
+            background: linear-gradient(135deg, #d9bfff63, #f7d1ff6e);
+            color: #7246b9;
             transform: scale(1.05);
             box-shadow:
-                0 0 15px rgba(166, 0, 255, 0.173),
-                0 0 30px rgba(219, 120, 255, 0.2);
+                0 0 15px rgba(166, 0, 255, 0.363),
+                0 0 30px rgba(219, 120, 255, 0.452);
         }
     
         .header {
@@ -138,7 +140,7 @@
         }
     
         .navbar {
-            background: rgba(255, 226, 241, 0.427);
+            background: rgba(248, 226, 255, 0.427);
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
@@ -237,7 +239,7 @@
                 <a class="nav-link" href="index.html">🍧 Receipt Generator</a>
             </li>
             <li class="nav-item ms-3">
-                <img id="navProfilePic" src="https://i.pinimg.com/736x/f7/b8/59/f7b8597c8c7dc821c0c0bf02fb96b0ef.jpg" class="nav-pfp">
+                <img id="navProfilePic" src="https://i.pinimg.com/736x/a6/17/b0/a617b066b5aaf1cbc007b96ecf35c44b.jpg" class="nav-pfp">
             </li>
         </ul>
     </div>
@@ -253,36 +255,14 @@
             <div class="inner-box">
     
             <h3>Flavours:</h3>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item1" value="120">
-                <label id="item1-label">Strawberry</label>
-                <span>₱120</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item2" value="150">
-                <label id="item2-label">Rocky Road</label>
-                <span>₱150</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item3" value="180">
-                <label id="item3-label">Cookies & Cream</label>
-                <span>₱180</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item4" value="168">
-                <label id="item4-label">Caramel</label>
-                <span>₱168</span>
-            </div>
-    
-            <div class="flavour">
-                <input type="checkbox" id="item5" value="130">
-                <label id="item5-label">Chocolate</label>
-                <span>₱130</span>
-            </div>
+            <br>
+            <select id="flavour" class="flavour-select">
+                <option value="120">Strawberry — ₱120</option>
+                <option value="150">Rocky Road — ₱150</option>
+                <option value="180">Cookies & Cream — ₱180</option>
+                <option value="168">Caramel — ₱168</option>
+                <option value="130">Chocolate — ₱130</option>
+            </select>
     
             <br>
 
