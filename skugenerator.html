@@ -21,7 +21,7 @@
             text-align: center;
         }
     
-        .create {
+        .sku {
             background: linear-gradient(135deg, #d9bfff, #f7d1ff);
             border: none;
             font-weight: bold;
@@ -31,7 +31,7 @@
             width: 100%;
         }
     
-        .create:hover {
+        .sku:hover {
             background: linear-gradient(135deg, #d9bfff63, #f7d1ff6e);
             color: #7246b9;
             transform: scale(1.05);
@@ -295,8 +295,15 @@
                 <br>
                 </div>
             
-                <button class="create" py-click="create_order">Generate SKU</button>
-            
+                <button class="sku" py-click="generate_sku">Generate SKU</button>
+
+                <br>
+                <hr>
+
+                <h6>Your generated SKU will appear here</h6>
+
+                <br>
+                <div id="sku"></div>
         </div>
 
     </div>

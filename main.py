@@ -31,3 +31,13 @@ def create_order(e):
     #.checked --> value included in computaiton IF user ticked it (https://www.w3schools.com/jsref/prop_checkbox_checked.asp)
 
     #.2f = 2 decimal places (https://www.w3schools.com/python/trypython.asp?filename=demo_fstring_modifier_novar)
+
+    def create_order(e): 
+        category = document["categories"].value
+        product_name = document["prod_name"].value
+        stock = document["stock"].value
+        
+        category_code = category[:3].upper()
+        product_code = product_name[:3].upper()
+
+        sku = category_code + "-" + product_code + "-" + stock document["sku"].innerText = sku
