@@ -32,12 +32,14 @@ def create_order(e):
 
     #.2f = 2 decimal places (https://www.w3schools.com/python/trypython.asp?filename=demo_fstring_modifier_novar)
 
-def generate_sku(e): 
-    category = document["categories"].value
-    product_name = document["prod_name"].value
-    stock = document["stock"].value
+def generate_sku(e):
+    categories = document.getElementById("categories").value
+    prod_name = document.getElementById("prod_name").value
+    stock = document.getElementById("stock").value
 
-    category = category[:3].upper()
-    product_name = product_name[:3].upper()
+    categories = categories[:3].upper()
+    prod_name = prod_name[:3].upper()
 
-    sku = category_code + "-" + product_code + "-" + stock document["sku"].innerText = sku
+    sku = categories + "-" + prod_name + "-" + stock
+
+    document.getElementById("sku").innerText = sku
