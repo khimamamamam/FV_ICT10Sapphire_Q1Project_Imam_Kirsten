@@ -255,20 +255,43 @@
         <div class="menu">
             <div class="inner-box">
     
-            <h3>Flavours:</h3>
-            <br>
-            <select id="flavour" class="flavour-select">
-                <option value="120">Strawberry — ₱120</option>
-                <option value="150">Rocky Road — ₱150</option>
-                <option value="180">Cookies & Cream — ₱180</option>
-                <option value="168">Caramel — ₱168</option>
-                <option value="130">Chocolate — ₱130</option>
-            </select>
-    
-            <br>
-
-            <button class="create" py-click="create_order">Create Order</button>
-    
+                <h3>Flavours</h3>
+                <br>
+                <div class="flavour">
+                    <input type="checkbox" id="item1" value="120">
+                    <label id="item1-label">Strawberry</label>
+                    <span>₱120</span>
+                </div>
+            
+                <div class="flavour">
+                    <input type="checkbox" id="item2" value="150">
+                    <label id="item2-label">Rocky Road</label>
+                    <span>₱150</span>
+                </div>
+            
+                <div class="flavour">
+                    <input type="checkbox" id="item3" value="180">
+                    <label id="item3-label">Cookies & Cream</label>
+                    <span>₱180</span>
+            
+                </div>
+            
+                <div class="flavour">
+                    <input type="checkbox" id="item4" value="168">
+                    <label id="item4-label">Caramel</label>
+                    <span>₱168</span>
+                </div>
+            
+                <div class="flavour">
+                    <input type="checkbox" id="item5" value="130">
+                    <label id="item5-label">Chocolate</label>
+                    <span>₱130</span>
+                </div>
+            
+                <br>
+            
+                <button class="create" py-click="create_order">Create Order</button>
+            
             </div>
         </div>
 
